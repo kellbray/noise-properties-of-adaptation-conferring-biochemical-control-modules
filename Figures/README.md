@@ -1,1 +1,1 @@
-This subdirectory is where figure panels with be saved from the MATLAB scripts. 
+Directory for figure panels.

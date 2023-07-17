@@ -1,7 +1,7 @@
 %% define data_path to data
 clear; close all; clc;
 
-data_path = '.\RawData\Reference_Actuated_System_with_Dilution_4comp\';
+data_path = './RawData/Reference_Actuated_System_with_Dilution_4comp/';
 
 %% import initial parameter search
 %stats_fname = strcat(data_path, ...
@@ -172,7 +172,7 @@ ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x
     'interpreter', 'latex', 'fontsize', 18)
 xlim([0,0.5])
 ylim([0,2])
-exportgraphics(gcf, '.\Figures\4comp_sensitivity_A.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/4comp_sensitivity_A.pdf','ContentType','vector')
 
 figure;
 scatter(S_betaX_sorted, noiseAvg, 20, 'filled', 'black')
@@ -184,7 +184,7 @@ ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x
     'interpreter', 'latex', 'fontsize', 18)
 xlim([0,0.26])
 ylim([0,2])
-exportgraphics(gcf, '.\Figures\4comp_sensitivity_B.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/4comp_sensitivity_B.pdf','ContentType','vector')
 
 figure;
 scatter(S_betaW_sorted, noiseAvg, 20, 'filled', 'black')
@@ -196,7 +196,7 @@ ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x
     'interpreter', 'latex', 'fontsize', 18)
 xlim([0,0.2])
 ylim([0,2])
-exportgraphics(gcf, '.\Figures\4comp_sensitivity_C.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/4comp_sensitivity_C.pdf','ContentType','vector')
 
 figure;
 scatter(S_phi_sorted, noiseAvg, 20, 'filled', 'black')
@@ -208,7 +208,7 @@ ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x
     'interpreter', 'latex', 'fontsize', 18)
 xlim([0,1])
 ylim([0,2])
-exportgraphics(gcf, '.\Figures\4comp_sensitivity_D.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/4comp_sensitivity_D.pdf','ContentType','vector')
 
 %%
 [m,i] = min(abs(noiseAvg - 0.374521))

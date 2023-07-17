@@ -1,5 +1,5 @@
 %% define path to data
-data_path = '.\RawData\Idealized_Reference_Actuated_System_4comp\';
+data_path = './RawData/Idealized_Reference_Actuated_System_4comp/';
 
 %% import data with parameter sampling over 4 orders of magnitude
 stats_fname_1 = strcat(data_path,...
@@ -231,12 +231,12 @@ scatter(OL_CV, CL_CV, ms, 'filled', 'black')
 hold on
 plot(x,x, 'LineWidth', lw_plot, 'Color','Red')
 xlim([0,25])
-ylim([0,25])
+ylim([0,25])aa
 xlabel('\textbf{Open-loop noise} \boldmath$\sqrt{\frac{1}{\langle x \rangle} + \frac{\tau_w}{\tau_x + \tau_w}\frac{1}{\langle w \rangle}}$',...
     'Interpreter', 'Latex', 'fontsize', fs_ax)
 ylabel('\textbf{Closed-loop noise} \boldmath$\mathrm{CV}_x$',...
     'Interpreter', 'Latex', 'fontsize', fs_ax)
-exportgraphics(gcf, '.\Figures\SI_4comp_rAIF_noisepenalty.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_4comp_rAIF_noisepenalty.pdf','ContentType','vector')
 
 %%
 [m, i] = max((OL_CV - CL_CV)./OL_CV)

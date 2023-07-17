@@ -7,7 +7,7 @@ lw_plot = 3;
 ms = 12;
 
 %% define path to data
-data_path = '.\DataForPlotting\';
+data_path = './DataForPlotting/';
 
 %% Panel B
 % load & extract data 
@@ -50,4 +50,4 @@ lgd = legend('\boldmath$N_2/N_x = 40$', '\boldmath$N_2/N_x = 20$',...
     '\boldmath$N_2/N_x = 10$', '\boldmath$N_2/N_x = 5$', ...
     'interpreter','latex','Location', 'southwest');
 lgd.FontSize = fs_ax-2;
-exportgraphics(gcf, '.\Figures\Fig_SI_CV_N1.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/Fig_SI_CV_N1.pdf','ContentType','vector')

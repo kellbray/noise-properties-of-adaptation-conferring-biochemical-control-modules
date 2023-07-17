@@ -1,5 +1,5 @@
 %% define path to data
-data_path = '.\RawData\Idealized_Sensor_Actuated_System_4comp\';
+data_path = './RawData/Idealized_Sensor_Actuated_System_4comp/';
 
 %% import data 
 stats_fname = strcat(data_path, 'Idealized_sensor_Actuated_STATISTICS.bin');
@@ -54,7 +54,7 @@ xlabel('\textbf{Open-loop noise} \boldmath$\sqrt{\frac{1}{\langle x \rangle} + \
     'Interpreter', 'Latex', 'fontsize', fs_ax)
 ylabel('\textbf{Closed-loop noise} \boldmath$\mathrm{CV}_x$',...
     'Interpreter', 'Latex', 'fontsize', fs_ax)
-exportgraphics(gcf, '.\Figures\SI_4comp_sAIF_noisesupp.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_4comp_sAIF_noisesupp.pdf','ContentType','vector')
 
 %%
 [m,i] = min((OL_CV - CL_CV)./OL_CV)

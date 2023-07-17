@@ -6,25 +6,25 @@
 //		theta : rate constant for X birth (linear dependence on Z abundance)
 // 		mu : constant rate of Y birth
 //		k : rate constant for W birth (linear dependence on Y abundance)
-//		alpha : constitutive birth rate of W
+//		alpha : constitutive birth rate of W - OPTIONAL - set to 0 to turn off
 //		C : mass action complex formation rate for sequestration of X and Y
-//		beta_x : individual degradation rate of X
-//		beta_y : individual degradation rate of X
+//		beta_x : individual degradation rate of X - OPTIONAL - set to 0 to turn off
+//		beta_y : individual degradation rate of X - OPTIONAL - set to 0 to turn off
 //		beta_z : degradation rate of Z 
-//		lambda : complex dissociation rate (death of complex + birth of X and Y)
-//		gamma : complex decay to the empty set (e.g., via protease)
-//		V_y : max rate for saturating actuation reaction rate V_y*y^n_y/(A_y^n_y + y^n_y) (when enabled) -- n_y > 0 --> activating actuation through Y
-//		n_y : Hill coefficient for saturating actuation reaction via Y (when enabled)
-// 		A_y : half max value of Y abundance for saturating actuation reaction via Y (when enabled)
-//		V_x : max rate for saturating actuation reaction rate V_x*x^n_x/(A_x^n_x + x^n_x) (when enabled) -- n_x > 0 --> inhibiting actuation through X
-//		n_x : Hill coefficient for saturating actuation reaction via X (when enabled)
-// 		A_x : half max value of Y abundance for saturating actuation reaction via X (when enabled)
+//		lambda : complex dissociation rate (death of complex + birth of X and Y) - OPTIONAL - set to 0 to turn off
+//		gamma : complex decay to the empty set (e.g., via protease) - OPTIONAL - set to 0 to turn off
+//		V_y : max rate for saturating actuation reaction rate V_y*y^n_y/(A_y^n_y + y^n_y) (when enabled) -- n_y > 0 --> activating actuation through Y - OPTIONAL - set to 0 to turn off
+//		n_y : Hill coefficient for saturating actuation reaction via Y (when enabled) - OPTIONAL - set to 0 to turn off
+// 		A_y : half max value of Y abundance for saturating actuation reaction via Y (when enabled) - OPTIONAL - set to 0 to turn off
+//		V_x : max rate for saturating actuation reaction rate V_x*x^n_x/(A_x^n_x + x^n_x) (when enabled) -- n_x > 0 --> inhibiting actuation through X - OPTIONAL - set to 0 to turn off
+//		n_x : Hill coefficient for saturating actuation reaction via X (when enabled) - OPTIONAL - set to 0 to turn off
+// 		A_x : half max value of Y abundance for saturating actuation reaction via X (when enabled) - OPTIONAL - set to 0 to turn off
 //		rec_min : minimum number of times each reaction must fire before the simulation exits
 //		seed : seed for PRNG
 //		filename_theme : a human-readable string identifier that will be contained in the filenames of all generated data files (e.g., my_antithetic_data)
-//		passive_reporter : 0 = no passive reporter, 1 = closed loop system + passive reporter
-// 		trace_duration: duration of time to track trace for (in units of tau_z = 1/beta_z)
-// 		pert_size : size of perturbation (beta_z --> pert_size*beta_z (where tau_z = 1/beta_z) after 1/3 of trace_duration time has passed)
+//		passive_reporter : 0 = no passive reporter, 1 = closed loop system + passive reporter 
+// 		trace_duration: duration of time to track trace for (in units of tau_z = 1/beta_z) - OPTIONAL - set to 0 to turn off
+// 		pert_size : size of perturbation (beta_z --> pert_size*beta_z (where tau_z = 1/beta_z) after 1/3 of trace_duration time has passed - OPTIONAL - set to 0 to turn off
 
 #include <unordered_map> 
 #include <vector>

@@ -7,7 +7,7 @@ lw_plot = 3;
 ms = 12;
 
 %% define path to data
-data_path = '.\DataForPlotting\';
+data_path = './DataForPlotting/';
 
 %% Panel B
 % load & extract data 
@@ -44,7 +44,7 @@ max_N2Nx = 200000;
 x = linspace(0,1,1e5);
 figure;
 h(1) = scatter(S_7, znoise_7, ms,'filled', 'MarkerFaceColor', "black",...
-    'DisplayName', '\boldmath$N_2/N_x > 80$');
+    'DisplayName', '/boldmath$N_2/N_x > 80$');
 hold on
 h(2) = scatter(S_6, znoise_6, ms,'filled', 'MarkerFaceColor', 	"#77AC30",...
     'DisplayName', '\boldmath$N_2/N_x = 80$');
@@ -77,4 +77,4 @@ yticks([0 0.5 1 1.5 2])
 lgd = legend(h([7 6 5 4 3 2 1]), 'interpreter','latex','orientation','horizontal');
 lgd.FontSize = fs_ax-2;
 lgd.NumColumns = 2;
-exportgraphics(gcf, '.\Figures\Fig_SI_CV_S.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/Fig_SI_CV_S.pdf','ContentType','vector')

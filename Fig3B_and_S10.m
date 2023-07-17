@@ -1,5 +1,5 @@
 %% define data_path to data
-data_path = '.\RawData\Reference_Actuated_System_with_Dilution\';
+data_path = './RawData/Reference_Actuated_System_with_Dilution/';
 
 %% import reseed data
 stats_fname_Down_1_1 = strcat(data_path, ...
@@ -395,10 +395,10 @@ N = [N,numel(S_rs_smallestCV)];
 
 %{
 %% define path where data for plotting will be saved
-save_path = '.\DataForPlotting\';
+save_path = './DataForPlotting/';
 
 
-%% save Fig. 3B data for density adjustment
+%% save data for density adjustment
 
 fileID = fopen(strcat(save_path,'Fig3B_rsMeans_data.txt'),'w');
 formatspec = '%.20f %.20f \r\n';
@@ -410,9 +410,7 @@ fclose(fileID);
 %% load density adjusted data
 
 % define path to data
-data_path = strcat('C:\Users\brayd\PhD\HilfingerGroup\code\',...
-    'ForPublications\Antithetic_Integral_Feedback_Control\',...
-    'AnalysisClean\DataForPlotting\');
+data_path = './DataForPlotting/';
 
 % load & extract data 
 Fig3B_densADJ = readmatrix(strcat(data_path,'Fig3B_rsMeans_densADJ.txt'));
@@ -464,6 +462,7 @@ znoiseIdeal = [MINznoiseIdeal; znoiseIdeal];
 x = linspace(0,1,1e5);
 close all
 
+% Fig. 3B
 figure;
 scatter(-1,-1, 10*ms, 'pentagram', 'filled','red')
 hold on
@@ -475,16 +474,17 @@ ax.FontSize = fs_ax - 4;
 xlabel('\textbf{Sensitivity} \boldmath$S$', 'interpreter', 'latex', 'fontsize', fs_ax)
 ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x \rangle}}$',...
     'interpreter', 'latex', 'fontsize', fs_ax)
-%[lgd,icons,plots,legend_text] = legend('Idealized systems', 'Systems with dilution', ...
-%    'Open-loop noise', 'Location', 'northeast');
-%icons(4).Children.MarkerSize = ms;
-%lgd.FontSize = fs_ax - 4;
+[lgd,icons,plots,legend_text] = legend('Idealized systems', 'Systems with dilution', ...
+    'Open-loop noise', 'Location', 'northeast');
+icons(4).Children.MarkerSize = ms;
+lgd.FontSize = fs_ax - 4;
 xlim([0,0.2])
 ylim([0,2])
 xticks([0 0.05 0.1 0.15 0.2])
 yticks([0 0.5 1 1.5 2])
-exportgraphics(gcf, '.\Figures\Fig3B_reseedmeans.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/Fig3B_reseedmeans.pdf','ContentType','vector')
 
+% Fig. S10
 figure;
 errorbar(S_plot, RelNoise_plot, ...
     RelNoise_std_plot, RelNoise_std_plot, S_std_plot, S_std_plot,...
@@ -498,12 +498,12 @@ ax.FontSize = fs_ax - 4;
 xlabel('\textbf{Sensitivity} \boldmath$S$', 'interpreter', 'latex', 'fontsize', fs_ax)
 ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x \rangle}}$',...
     'interpreter', 'latex', 'fontsize', fs_ax)
-%[lgd,icons,plots,legend_text] = legend('Idealized systems', 'Systems with dilution', ...
-%    'Open-loop noise', 'Location', 'northeast');
+[lgd,icons,plots,legend_text] = legend('Idealized systems', 'Systems with dilution', ...
+    'Open-loop noise', 'Location', 'northeast');
 %icons(4).Children.MarkerSize = ms;
-%lgd.FontSize = fs_ax - 4;
+lgd.FontSize = fs_ax - 4;
 xlim([0,0.2])
 ylim([0,2])
 xticks([0 0.05 0.1 0.15 0.2])
 yticks([0 0.5 1 1.5 2])
-exportgraphics(gcf, '.\Figures\Fig3B_reseedmeans_with_errorbars.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/Fig3B_reseedmeans_with_errorbars.pdf','ContentType','vector')

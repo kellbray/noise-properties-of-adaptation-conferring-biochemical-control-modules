@@ -7,7 +7,7 @@ lw_plot = 3;
 ms = 12;
 
 %% define path to data
-data_path = '.\DataForPlotting\';
+data_path = './DataForPlotting/';
 
 %% Panel B
 % load & extract data 
@@ -31,4 +31,4 @@ xticks([0 25 50 75 100])
 yticks([0 0.5 1 1.5 2])
 lgd = legend('Numerical closed-loop simulations', 'Predicted bound');
 lgd.FontSize = fs_ax-4;
-exportgraphics(gcf, '.\Figures\SI_SensorBound.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_SensorBound.pdf','ContentType','vector')

@@ -1,7 +1,7 @@
 %% define data_path to data
 clear; close all; clc;
 
-data_path = '.\RawData\Reference_Actuated_System_with_Dilution_4comp\';
+data_path = './RawData/Reference_Actuated_System_with_Dilution_4comp/';
 
 %% import initial parameter search
 stats_fname_betaX = strcat(data_path, ...
@@ -151,4 +151,4 @@ lgd = legend('\boldmath$S = (S_{\beta_x} + S_{\beta_w} + S_{\lambda})/3$', ...
     '\boldmath$S_{\beta_x}$', '\boldmath$S_{\beta_w}$', '\boldmath$S_{\lambda}$', 'Interpreter', 'latex',...
     'Location', 'northeast');
 lgd.FontSize = 14;
-exportgraphics(gcf, '.\Figures\4_comp_sensitivity_RS.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/4_comp_sensitivity_RS.pdf','ContentType','vector')

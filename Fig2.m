@@ -7,7 +7,7 @@ lw_plot = 3;
 ms = 12;
 
 %% define path to data
-data_path = '.\DataForPlotting\';
+data_path = './DataForPlotting/';
 
 %% Panel B
 % load & extract data 
@@ -33,8 +33,7 @@ lgd = legend('Numerical closed-loop simulations', 'Open-loop noise', ...
 lgd.FontSize = fs_ax - 4;
 xticks([0 25 50 75 100])
 yticks([0 0.25 0.5])
-exportgraphics(gcf, strcat('C:\Users\brayd\PhD\HilfingerGroup\',...
-    'AdaptationPaper_figures\Fig2B.pdf'),'ContentType','vector')
+exportgraphics(gcf, './Figures/Fig2C.pdf','ContentType','vector')
 
 %% Panel C
 % load & extract data 
@@ -79,4 +78,4 @@ lgd = legend('$0.2 \leq k\tau_x < 1$', '$1 \leq k\tau_x < 5$', '$5 \leq k\tau_x$
 lgd.FontSize = fs_ax;
 ylim([0,1])
 xlim([0,10])
-exportgraphics(gcf, '.\Figures\Fig2C.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/Fig2C.pdf','ContentType','vector')

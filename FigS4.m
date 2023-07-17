@@ -24,7 +24,7 @@ xlabel('Sensitivity \boldmath$S$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\textbf{Relative noise} \boldmath$\frac{\mathrm{CV}_x}{\sqrt{1/\langle x \rangle}}$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_A.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_A.pdf','ContentType','vector')
 
 figure;
 loglog(stats.Y_avg, stats.X_avg,...
@@ -38,7 +38,7 @@ xlabel('\boldmath$\langle z_1 \rangle$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\langle z_2 \rangle$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_B.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_B.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_y.*stats.Y_avg, params.beta_x.*stats.X_avg,...
@@ -70,7 +70,7 @@ xlabel('\boldmath$\gamma/\beta_1$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$(\gamma \langle z_1 z_2 \rangle)/(\beta_1 \langle z_1 \rangle)$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_C.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_C.pdf','ContentType','vector')
 
 figure;
 loglog(params.C./params.beta_x, ...
@@ -89,7 +89,7 @@ xlabel('\boldmath$\gamma/\beta_2$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$(\gamma \langle z_1 z_2 \rangle)/(\beta_2 \langle z_2 \rangle)$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_D.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_D.pdf','ContentType','vector')
 
 figure;
 loglog(params.mu, params.theta, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -101,7 +101,7 @@ xlabel('\boldmath$\mu$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\theta$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_E.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_E.pdf','ContentType','vector')
 
 figure;
 loglog(params.mu, params.k, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -112,7 +112,7 @@ xlabel('\boldmath$\mu$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$k$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_F.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_F.pdf','ContentType','vector')
 
 figure;
 loglog(params.mu, params.C, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -133,7 +133,7 @@ xlabel('\boldmath$\mu$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\beta_1$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_H.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_H.pdf','ContentType','vector')
 
 figure;
 loglog(params.mu, params.beta_x, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -144,7 +144,7 @@ xlabel('\boldmath$\mu$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\beta_2$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_I.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_I.pdf','ContentType','vector')
 
 figure;
 loglog(params.C, params.theta, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -155,7 +155,7 @@ xlabel('\boldmath$\gamma$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\theta$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_J.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_J.pdf','ContentType','vector')
 
 figure;
 loglog(params.k, params.theta, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -166,7 +166,7 @@ xlabel('\boldmath$k$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\theta$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_K.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_K.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_y, params.theta, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -177,7 +177,7 @@ xlabel('\boldmath$\beta_1$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\theta$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_L.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_L.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_x, params.theta, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -188,7 +188,7 @@ xlabel('\boldmath$\beta_2$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\theta$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_M.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_M.pdf','ContentType','vector')
 
 figure;
 loglog(params.k, params.C, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -199,7 +199,7 @@ xlabel('\boldmath$k$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\gamma$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_N.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_N.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_y, params.C, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -210,7 +210,7 @@ xlabel('\boldmath$\beta_1$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\gamma$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_O.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_O.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_x, params.C, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -221,7 +221,7 @@ xlabel('\boldmath$\beta_2$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\gamma$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_O.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_O.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_y, params.k, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -232,7 +232,7 @@ xlabel('\boldmath$\beta_1$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$k$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_P.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_P.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_x, params.k, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -243,7 +243,7 @@ xlabel('\boldmath$\beta_2$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$k$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_Q.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_Q.pdf','ContentType','vector')
 
 figure;
 loglog(params.beta_y, params.beta_x, 'o','MarkerSize', 3, 'MarkerFaceColor', [0.8500 0.3250 0.0980], 'MarkerEdgeColor', [0.8500 0.3250 0.0980])
@@ -254,5 +254,5 @@ xlabel('\boldmath$\beta_1$',...
     'Interpreter', 'Latex', 'fontsize', 18)
 ylabel('\boldmath$\beta_2$',...
     'Interpreter', 'Latex', 'fontsize', 18)
-exportgraphics(gcf, '.\Figures\SI_params_R.pdf','ContentType','vector')
+exportgraphics(gcf, './Figures/SI_params_R.pdf','ContentType','vector')
 
